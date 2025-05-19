@@ -1,67 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Gaming PC for UAE</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            margin: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #007bff;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        .button {
-            display: inline-block;
-            background: #007bff;
-            color: white;
-            padding: 12px 20px;
-            margin: 10px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-        }
-        .button:hover {
-            background: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaming PC UAE</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at center, #e0f0ff, #f5f5f5);
+      margin: 20px;
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.97);
+      transition: opacity 1s ease, transform 0.8s ease;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: auto;
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 8px;
+      color: #007bff;
+    }
+
+    .typewriter {
+      display: inline-block;
+      border-right: 2px solid #007bff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 2.5s steps(35, end), blink 0.8s infinite;
+      font-weight: 600;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent }
+      50% { border-color: #007bff }
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 8px 0;
+      color: #444;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+      font-size: 16px;
+      text-align: left;
+      display: inline-block;
+    }
+
+    ul li {
+      background: #eef8ff;
+      margin-bottom: 10px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    ul li:hover {
+      background: #d8ecff;
+      transform: scale(1.02);
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    }
+
+    .price {
+      color: #28a745;
+      font-weight: bold;
+      animation: bounce 0.5s ease;
+    }
+
+    @keyframes bounce {
+      0% { transform: scale(0.9) }
+      50% { transform: scale(1.1) }
+      100% { transform: scale(1) }
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      padding: 12px 22px;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+      position: relative;
+    }
+
+    .button:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 14px rgba(0, 123, 255, 0.5);
+      background: linear-gradient(to right, #00c6ff, #007bff);
+    }
+
+    .tooltip-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip-container .tooltip-text {
+      visibility: hidden;
+      width: 120px;
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 6px 8px;
+      position: absolute;
+      bottom: 130%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 14px;
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    .tooltip-container:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .reload-button {
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border-radius: 50%;
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+
+    .reload-button:hover {
+      transform: rotate(360deg) scale(1.1);
+      box-shadow: 0 0 14px rgba(0, 123, 255, 0.5);
+      background: linear-gradient(to right, #00c6ff, #007bff);
+    }
+
+    .reload-button svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      h1, .typewriter {
+        font-size: 22px;
+      }
+      .button {
+        font-size: 15px;
+        padding: 10px 18px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Ultimate Gaming PC for UAE</h1>
-        <p>This gaming PC is designed to meet the demands of UAE gamers, streamers, and esports professionals.</p>
+  <div class="container">
+    <h1><span class="typewriter">Ultimate Gaming PC – UAE Edition</span></h1>
+    <p>Built for Gamers, Streamers & Esports Pros in the UAE</p>
 
-        <h2>Key Components:</h2>
-        <ul>
-            <li><b>Processor:</b> Intel Core i7-14700KF (AED 1,260)</li>
-            <li><b>Graphics Card:</b> NVIDIA RTX 4060 Ti (AED 1,689)</li>
-            <li><b>RAM:</b> 16GB DDR4 (AED 105)</li>
-            <li><b>Storage:</b> 1TB NVMe SSD (AED 215)</li>
-            <li><b>Hard Disk:</b> WD Black P10 4TB Gaming HDD (AED 345)</li>
-        </ul>
+    <h2>Key Components:</h2>
+    <ul id="componentList">
+      <li><b>Processor:</b> Intel Core i7-14700KF <span class="price">(AED 1,260)</span></li>
+      <li><b>Graphics:</b> NVIDIA RTX 4060 Ti <span class="price">(AED 1,689)</span></li>
+      <li><b>RAM:</b> 16GB DDR4 <span class="price">(AED 105)</span></li>
+      <li><b>Storage:</b> 1TB NVMe SSD <span class="price">(AED 215)</span></li>
+      <li><b>Hard Disk:</b> WD Black P10 4TB HDD <span class="price">(AED 345)</span></li>
+    </ul>
 
-        <h2>Why This PC is Perfect for UAE?</h2>
-        <p>- Optimized for local gaming trends & esports competitions.</p>
-        <p>- Supports live streaming and high-performance gaming setups.</p>
-        <p>- Designed with efficient cooling for UAE’s hot climate.</p>
+    <h2>Why Choose This PC?</h2>
+    <p>✓ Perfect for competitive gaming & streaming</p>
+    <p>✓ Optimized for UAE’s hot climate</p>
+    <p>✓ Future-ready and budget-smart</p>
 
-        <div class="buttons">
-            <a class="button" href="https://www.amazon.ae/s?k=macOS+gaming+components&crid=38YHNOGQCUNYH&sprefix=macos+gaming+components%2Caps%2C230&ref=nb_sb_noss" target="_blank">Buy Gaming Components on Amazon.ae</a>
-            <a class="button" href="https://amazon.ae/" target="_blank">Click to goto Amazon.ae itself</a>
-        </div>
+    <div class="buttons">
+      <a class="button" href="https://www.amazon.ae/" target="_blank">Buy on Amazon.ae</a>
+      <a class="button" href="https://www.youtube.com/" target="_blank">Watch on YouTube</a>
+      
+      <div class="tooltip-container">
+        <button class="reload-button" onclick="location.reload()">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6a6 6 0 1 1-6-6zm0-2a8 8 0 1 0 8 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+        </button>
+        <div class="tooltip-text">Reload Website</div>
+      </div>
     </div>
+  </div>
+
+  <script>
+    // Fade and scale-in effect
+    window.addEventListener('load', () => {
+      document.body.style.opacity = '1';
+      document.body.style.transform = 'scale(1)';
+    });
+
+    // Animate price appearance
+    const prices = document.querySelectorAll('.price');
+    prices.forEach((price, i) => {
+      price.style.opacity = '0';
+      price.style.transform = 'translateY(10px)';
+      setTimeout(() => {
+        price.style.transition = 'all 0.4s ease';
+        price.style.opacity = '1';
+        price.style.transform = 'translateY(0)';
+      }, i * 250);
+    });
+  </script>
 </body>
 </html>
